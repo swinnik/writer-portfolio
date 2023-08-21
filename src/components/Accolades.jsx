@@ -40,20 +40,25 @@ const styles = {
     // alignItems: "start",
   },
   sectionTitle: {
-    padding: "40px 30px",
+    // padding: "40px 30px",
+    marginLeft: "100px",
     color: "#fff",
     fontSize: "84px",
     fontWeight: "lighter",
     position: "sticky",
     top: 0,
     left: 0,
-    width: "120%",
+    width: "20%",
     backgroundColor: "#302424",
+  },
+  entries: {
+    marginLeft: "500px",
   },
   entry: {
     padding: "40px 30px",
     color: "#fff",
     fontSize: "24px",
+    width: "70%",
     fontWeight: "lighter",
   },
 
