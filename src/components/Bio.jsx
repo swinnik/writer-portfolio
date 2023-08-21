@@ -27,6 +27,7 @@ const styles = {
   },
 
   bio: {
+    marginTop: "100px",
     color: "#fff",
     display: "flex",
     // flexDirection: "column",

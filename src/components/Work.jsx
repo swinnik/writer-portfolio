@@ -32,15 +32,24 @@ const styles = {
   },
   sectionTitle: {
     color: "#fff",
+    marginLeft: "100px",
     fontSize: "84px",
     fontWeight: "lighter",
     position: "sticky",
     top: 0,
-    width: "100%",
+    left: 0,
+    // right: 200,
+
+    width: "20%",
     backgroundColor: "#e03434",
   },
+  entries: {
+    marginLeft: "500px",
+  },
+
   entry: {
     padding: "40px 30px",
+    width: "70%",
     color: "#fff",
     fontSize: "24px",
     fontWeight: "lighter",

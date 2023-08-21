@@ -16,7 +16,7 @@ export default Header;
 const styles = {
   header: {
     position: "fixed",
-    zIndex: 1,
+    zIndex: 99,
     top: 0,
     left: 0,
     right: 0,
