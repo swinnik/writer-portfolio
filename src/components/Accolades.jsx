@@ -5,14 +5,25 @@ const Accolades = () => {
   console.log(accolades);
   return (
     <div style={styles.section}>
-      <div style={styles.sectionTitle}>Accolades</div>
+      <div style={styles.sectionTitle}>
+        <div style={{ height: "100px", backgroundColor: "tran " }}></div>
+        Accolades
+      </div>
       <div style={styles.entries}>
         {accolades &&
           accolades.map((accolade) => (
-            <div style={styles.entry}>
-              <div style={styles.title}>{accolade.title}</div>
+            <div style={styles.entry} key={accolade.title}>
+              <div
+                style={{
+                  width: "40%",
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div style={styles.title}>{accolade.title}</div>
+                <div style={styles.date}>{accolade.year}</div>
+              </div>
               <div style={styles.publication}>{accolade.recognition}</div>
-              <div style={styles.date}>{accolade.year}</div>
             </div>
           ))}
       </div>
@@ -24,16 +35,20 @@ export default Accolades;
 
 const styles = {
   section: {
-    backgroundColor: "#e03434",
-    padding: "40px 80px",
-    display: "flex",
-    alignItems: "start",
+    backgroundColor: "#302424",
+    // display: "flex",
+    // alignItems: "start",
   },
   sectionTitle: {
     padding: "40px 30px",
     color: "#fff",
     fontSize: "84px",
     fontWeight: "lighter",
+    position: "sticky",
+    top: 0,
+    left: 0,
+    width: "120%",
+    backgroundColor: "#302424",
   },
   entry: {
     padding: "40px 30px",

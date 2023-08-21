@@ -15,15 +15,16 @@ export default Header;
 
 const styles = {
   header: {
-    position: "sticky",
+    position: "fixed",
+    zIndex: 1,
     top: 0,
     left: 0,
     right: 0,
-
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "40px 30px",
+    // padding: "40px 30px",
+    height: "100px ",
     backgroundColor: "black",
     color: "#fff",
     fontSize: "24px",

@@ -19,47 +19,36 @@ const Contact = () => {
     setIsHovered(false);
   };
 
+  const section = {
+    backgroundColor: "#1f411e",
+    padding: "200px",
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "start",
+    textDecoration: "underline",
+    color: isHovered ? "black" : "#fff",
+  };
+
   const sectionTitleStyle = {
-    padding: "40px 30px",
+    // padding: "40px 30px",
     color: isHovered ? "black" : "#fff",
     fontSize: "84px",
     fontWeight: "lighter",
     cursor: "pointer",
   };
 
-  const section = {
-    backgroundColor: "#e03434",
-    padding: "40px 80px",
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "start",
-    textDecoration: "underline",
-    color: isHovered ? "black" : "#fff",
-  };
-
   return (
-    <div
-      style={section}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div style={sectionTitleStyle} onClick={handleContactClick}>
+    <div style={section}>
+      <div
+        style={sectionTitleStyle}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleContactClick}
+      >
         Contact
       </div>
     </div>
   );
-};
-
-const styles = {
-  section: {
-    backgroundColor: "#e03434",
-    padding: "40px 80px",
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "start",
-    textDecoration: "underline",
-    color: "#fff",
-  },
 };
 
 export default Contact;
