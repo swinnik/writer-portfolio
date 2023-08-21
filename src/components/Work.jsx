@@ -28,6 +28,7 @@ const styles = {
     backgroundColor: "#e03434",
     padding: "40px 80px",
     display: "flex",
+    justifyContent: "space-around",
     alignItems: "start",
   },
   sectionTitle: {
