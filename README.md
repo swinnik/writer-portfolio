@@ -1,2 +1,3 @@
-# s3Demo
-github CI/CD run through
+# writer-portfolio
+
+Portfolio website to catalogue works, publications, accolades, and contact information.
