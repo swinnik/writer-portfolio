@@ -55,7 +55,7 @@ const styles = {
   },
   sectionTitle: {
     color: "#fff",
-    fontSize: "5em",
+    fontSize: "4em",
     fontWeight: "lighter",
     position: "sticky",
     top: 0,
@@ -63,6 +63,7 @@ const styles = {
     paddingLeft: "1%",
   },
   entries: {
+    fontSize: "3em",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
