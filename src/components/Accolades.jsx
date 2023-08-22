@@ -6,14 +6,10 @@ const Accolades = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1740);
+      setIsMobile(window.innerWidth <= 1400);
     };
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   return (
@@ -33,7 +29,7 @@ const Accolades = () => {
             <div style={styles.entry} key={accolade.title}>
               <div
                 style={{
-                  width: "40%",
+                  width: "100%",
                   display: "flex",
                   justifyContent: "space-between",
                 }}

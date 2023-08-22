@@ -6,14 +6,14 @@ const Work = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1740);
+      setIsMobile(window.innerWidth <= 900);
     };
 
     window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    // return () => {
+    //   window.removeEventListener("resize", handleResize);
+    // };
   }, []);
 
   console.log(workCollection);
@@ -32,11 +32,19 @@ const Work = () => {
         {workCollection &&
           workCollection.map((work) => (
             <div style={styles.entry} key={work.title}>
-              <a href={work.link} target="_blank" rel="noopener noreferrer">
-                <div style={styles.title}>{work.title}</div>
-              </a>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <a href={work.link} target="_blank" rel="noopener noreferrer">
+                  <div style={styles.title}>{work.title}</div>
+                </a>
+                <div style={styles.date}>{work.date}</div>
+              </div>
               <div style={styles.publication}>{work.publication}</div>
-              <div style={styles.date}>{work.date}</div>
               <div style={styles.content}>{work.content}</div>
             </div>
           ))}
@@ -72,6 +80,7 @@ const styles = {
   entry: {
     // border: "1px solid #fff",
     padding: "2% 0px",
+    margin: "0px 0px 20px 0px",
     width: "60%",
     color: "#fff",
     fontSize: "24px",
@@ -85,6 +94,8 @@ const styles = {
   publication: {
     fontSize: "18px",
     fontWeight: "bold",
+    margin: "10px 0px 5px 0 ",
+    // textAlign: "right",
   },
   date: {
     fontSize: "18px",
@@ -93,5 +104,6 @@ const styles = {
   content: {
     fontSize: "18px",
     fontWeight: "bold",
+    textAlign: "justify",
   },
 };
