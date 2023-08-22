@@ -8,7 +8,8 @@ const Bio = () => {
         <div style={styles.p}>
           {" "}
           Daniel Pope is a writer and musician from Seattle. He has an M.F.A.
-          from Rutgers-Newark. He is currently pursuing a Ph.D. in English.
+          from Rutgers-Newark. He is currently pursuing a Ph.D. in English in
+          england.
         </div>
       </div>
     </div>
