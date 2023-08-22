@@ -35,5 +35,6 @@ const styles = {
     alignItems: "center",
     height: "400px",
     backgroundColor: "#1D5E47",
+    padding: "0px 10%",
   },
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import instaImage from "../assets/images/icons8-instagram-50.png";
 
 const Header = () => {
   const handleNameClick = () => {
@@ -20,15 +21,11 @@ const Header = () => {
     <div style={styles.header}>
       <div style={styles.leftHeader}>
         <div onClick={handleNameClick} style={{ cursor: "pointer" }}>
-          Daniel Pope | Writing
+          Daniel Pope
         </div>
-      </div>
-      <div style={styles.rightheader}>
         <div onClick={handleInstaClick} style={{ cursor: "pointer" }}>
-          {" "}
-          Insta{" "}
-        </div>{" "}
-        |{" "}
+          <img style={styles.insta} src={instaImage} alt="instagram logo" />{" "}
+        </div>
         <div onClick={handleContactClick} style={{ cursor: "pointer" }}>
           {" "}
           Contact{" "}
@@ -48,7 +45,8 @@ const styles = {
     left: 0,
     width: "100%",
     display: "flex",
-    justifyContent: "space-between",
+    flexWrap: "wrap",
+    // justifyContent: "space-between",
     alignItems: "center",
     height: "100px",
     backgroundColor: "black",
@@ -56,16 +54,21 @@ const styles = {
     fontSize: "24px",
     fontWeight: "lighter",
   },
+
   leftHeader: {
     display: "flex",
     alignItems: "center",
-    paddingLeft: "3%",
-  },
-  rightheader: {
-    display: "flex",
-    alignItems: "center",
     justifyContent: "space-between",
-    width: "10%",
-    paddingRight: "3%",
+    // width: "20%",
+    width: "100%",
+    paddingLeft: "5%",
+    paddingRight: "5%",
+  },
+
+  insta: {
+    color: "#fff",
+    backgroundColor: "white",
+    borderRadius: "25%",
+    height: "1.5em",
   },
 };

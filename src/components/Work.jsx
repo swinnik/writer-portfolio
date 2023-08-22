@@ -6,7 +6,7 @@ const Work = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 1740);
     };
 
     window.addEventListener("resize", handleResize);
@@ -50,7 +50,7 @@ export default Work;
 const styles = {
   section: {
     backgroundColor: "#93827F",
-    width: "100%",
+    // width: "100%",
   },
   sectionTitle: {
     color: "#fff",
@@ -59,7 +59,7 @@ const styles = {
     position: "sticky",
     top: 0,
     left: 0,
-    width: "100%",
+    paddingLeft: "1%",
   },
   entries: {
     display: "flex",
@@ -69,8 +69,9 @@ const styles = {
   },
 
   entry: {
+    // border: "1px solid #fff",
     padding: "2% 0px",
-    width: "50%",
+    width: "60%",
     color: "#fff",
     fontSize: "24px",
     fontWeight: "lighter",
