@@ -8,6 +8,7 @@ const Bio = () => {
           style={{
             display: "flex",
             justifyContent: "space-between",
+            flexWrap: "wrap",
             alignItems: "center",
           }}
         >
@@ -43,12 +44,11 @@ const styles = {
     marginTop: "100px",
     color: "#fff",
     display: "flex",
-    // flexDirection: "column",
+    flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    height: "400px",
     backgroundColor: "#1D5E47",
-    padding: "5% 0",
+    padding: "5% 5%",
   },
   profileImage: {
     height: "15rem",
