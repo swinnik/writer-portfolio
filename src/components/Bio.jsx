@@ -34,6 +34,6 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "400px",
-    backgroundColor: "darkgreen",
+    backgroundColor: "#1D5E47",
   },
 };

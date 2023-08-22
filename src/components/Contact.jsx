@@ -6,8 +6,6 @@ const Contact = () => {
   const handleContactClick = () => {
     const gmailComposeLink =
       "https://mail.google.com/mail/?view=cm&to=Dapope.townsend@gmail.com&subject=Your%20Subject&body=Hi%20Daniel,";
-
-    // Open a new window or tab with the Gmail compose link
     window.open(gmailComposeLink, "_blank");
   };
 
@@ -20,8 +18,8 @@ const Contact = () => {
   };
 
   const section = {
-    backgroundColor: "#1f411e",
-    padding: "200px",
+    backgroundColor: "#93827F",
+    padding: "8%",
     display: "flex",
     justifyContent: "space-around",
     alignItems: "start",
@@ -30,9 +28,8 @@ const Contact = () => {
   };
 
   const sectionTitleStyle = {
-    // padding: "40px 30px",
     color: isHovered ? "black" : "#fff",
-    fontSize: "84px",
+    fontSize: "5em",
     fontWeight: "lighter",
     cursor: "pointer",
   };
