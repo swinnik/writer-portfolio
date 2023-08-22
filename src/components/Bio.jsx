@@ -22,7 +22,7 @@ const Bio = () => {
           {" "}
           Daniel Pope is a writer and musician from Seattle. He has an M.F.A.
           from Rutgers-Newark. <br />
-          He is currently pursuing a Ph.D. in English.
+          He is currently pursuing a Ph.D. in English in England.
         </div>
       </div>
     </div>
