@@ -27,6 +27,18 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[hash].[ext]",
+              outputPath: "images", // This is the folder where images will be copied
+            },
+          },
+        ],
+      },
     ],
   },
 };
