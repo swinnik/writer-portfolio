@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import accolades from "../data/accolades.js";
 
 const Accolades = () => {
-  console.log(accolades);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div style={styles.section}>
-      <div style={styles.sectionTitle}>
+      <div
+        style={{
+          ...styles.sectionTitle,
+          backgroundColor: isMobile ? "#302424" : "transparent",
+        }}
+      >
         <div style={{ height: "100px", backgroundColor: "tran " }}></div>
         Accolades
       </div>
@@ -31,37 +49,32 @@ const Accolades = () => {
   );
 };
 
-export default Accolades;
-
 const styles = {
   section: {
     backgroundColor: "#302424",
-    // display: "flex",
-    // alignItems: "start",
   },
   sectionTitle: {
-    // padding: "40px 30px",
-    marginLeft: "100px",
     color: "#fff",
-    fontSize: "84px",
+    fontSize: "5em",
     fontWeight: "lighter",
     position: "sticky",
     top: 0,
     left: 0,
-    width: "20%",
-    backgroundColor: "#302424",
+    width: "100%",
   },
   entries: {
-    marginLeft: "500px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   entry: {
-    padding: "40px 30px",
+    padding: "2% 0px",
     color: "#fff",
     fontSize: "24px",
-    width: "70%",
+    width: "50%",
     fontWeight: "lighter",
   },
-
   title: {
     fontSize: "24px",
     fontWeight: "bold",
@@ -79,3 +92,5 @@ const styles = {
     fontWeight: "bold",
   },
 };
+
+export default Accolades;

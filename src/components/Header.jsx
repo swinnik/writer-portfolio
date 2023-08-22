@@ -19,11 +19,20 @@ const Header = () => {
   return (
     <div style={styles.header}>
       <div style={styles.leftHeader}>
-        <div onClick={handleNameClick}>Daniel Pope | Writing</div>
+        <div onClick={handleNameClick} style={{ cursor: "pointer" }}>
+          Daniel Pope | Writing
+        </div>
       </div>
       <div style={styles.rightheader}>
-        <div onClick={handleInstaClick}> Insta </div> |{" "}
-        <div onClick={handleContactClick}> Contact </div>
+        <div onClick={handleInstaClick} style={{ cursor: "pointer" }}>
+          {" "}
+          Insta{" "}
+        </div>{" "}
+        |{" "}
+        <div onClick={handleContactClick} style={{ cursor: "pointer" }}>
+          {" "}
+          Contact{" "}
+        </div>
       </div>
     </div>
   );
@@ -37,26 +46,26 @@ const styles = {
     zIndex: 99,
     top: 0,
     left: 0,
-    right: 0,
+    width: "100%",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    // padding: "40px 30px",
-    height: "100px ",
+    height: "100px",
     backgroundColor: "black",
     color: "#fff",
     fontSize: "24px",
     fontWeight: "lighter",
-    padding: "0 100px",
   },
   leftHeader: {
     display: "flex",
     alignItems: "center",
+    paddingLeft: "3%",
   },
   rightheader: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    width: "200px",
+    width: "10%",
+    paddingRight: "3%",
   },
 };

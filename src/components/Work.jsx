@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import workCollection from "../data/work.js";
 
 const Work = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   console.log(workCollection);
   return (
     <div style={styles.section}>
-      <div style={styles.sectionTitle}>
+      <div
+        style={{
+          ...styles.sectionTitle,
+          backgroundColor: isMobile ? "#93827F" : "transparent",
+        }}
+      >
         <div style={{ height: "100px", backgroundColor: "tran " }}></div>
         Work
       </div>
@@ -13,8 +32,10 @@ const Work = () => {
         {workCollection &&
           workCollection.map((work) => (
             <div style={styles.entry} key={work.title}>
-              <div style={styles.title}>{work.title}</div>
-              <div style={styles.publication}>{work.publications}</div>
+              <a href={work.link} target="_blank" rel="noopener noreferrer">
+                <div style={styles.title}>{work.title}</div>
+              </a>
+              <div style={styles.publication}>{work.publication}</div>
               <div style={styles.date}>{work.date}</div>
               <div style={styles.content}>{work.content}</div>
             </div>
@@ -28,28 +49,28 @@ export default Work;
 
 const styles = {
   section: {
-    backgroundColor: "#e03434",
+    backgroundColor: "#93827F",
+    width: "100%",
   },
   sectionTitle: {
     color: "#fff",
-    marginLeft: "100px",
-    fontSize: "84px",
+    fontSize: "5em",
     fontWeight: "lighter",
     position: "sticky",
     top: 0,
     left: 0,
-    // right: 200,
-
-    width: "20%",
-    backgroundColor: "#e03434",
+    width: "100%",
   },
   entries: {
-    marginLeft: "500px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   entry: {
-    padding: "40px 30px",
-    width: "70%",
+    padding: "2% 0px",
+    width: "50%",
     color: "#fff",
     fontSize: "24px",
     fontWeight: "lighter",
