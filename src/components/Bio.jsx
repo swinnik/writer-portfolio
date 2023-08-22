@@ -4,7 +4,19 @@ const Bio = () => {
   return (
     <div style={styles.bio}>
       <div>
-        <div style={styles.h1}> Daniel Pope</div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <div style={styles.h1}> Daniel Pope</div>
+          <img
+            src="https://media.licdn.com/dms/image/D4E03AQFM-oPf4jIItw/profile-displayphoto-shrink_400_400/0/1676838037708?e=1698278400&v=beta&t=GaxJQgHG243q8Xsd4vRvmXh9CsSyvNXbe5qFLpmi-do"
+            style={styles.profileImage}
+          />
+        </div>
         <div style={styles.p}>
           {" "}
           Daniel Pope is a writer and musician from Seattle. He has an M.F.A.
@@ -23,7 +35,7 @@ const styles = {
     fontSize: "6em",
   },
   p: {
-    fontSize: "1.5em",
+    fontSize: "1.3em",
     fontFamily: "sans-serif",
   },
 
@@ -36,6 +48,13 @@ const styles = {
     alignItems: "center",
     height: "400px",
     backgroundColor: "#1D5E47",
-    padding: "0px 10%",
+    padding: "5% 0",
+  },
+  profileImage: {
+    height: "15rem",
+    borderRadius: "50%",
+    marginLeft: "10%",
+    margin: "5% 0",
+    boxShadow: "5px 5px 20px 0px rgba(0,0,0,0.75)",
   },
 };
