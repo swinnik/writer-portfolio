@@ -6,7 +6,7 @@ const Accolades = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1400);
+      setIsMobile(window.innerWidth <= 1420);
     };
 
     window.addEventListener("resize", handleResize);
@@ -18,6 +18,7 @@ const Accolades = () => {
         style={{
           ...styles.sectionTitle,
           backgroundColor: isMobile ? "#302424" : "transparent",
+          boxShadow: isMobile ? "5px 5px 20px 0px rgba(0,0,0,0.75)" : "none",
         }}
       >
         <div style={{ height: "100px", backgroundColor: "tran " }}></div>
@@ -57,6 +58,7 @@ const styles = {
     top: 0,
     left: 0,
     paddingLeft: "1%",
+    marginBottom: "5%",
   },
   entries: {
     fontSize: "3em",

@@ -23,6 +23,7 @@ const Work = () => {
         style={{
           ...styles.sectionTitle,
           backgroundColor: isMobile ? "#93827F" : "transparent",
+          boxShadow: isMobile ? "5px 5px 20px 0px rgba(0,0,0,0.75)" : "none",
         }}
       >
         <div style={{ height: "100px", backgroundColor: "tran " }}></div>
@@ -81,7 +82,7 @@ const styles = {
     // border: "1px solid #fff",
     padding: "2% 0px",
     margin: "0px 0px 20px 0px",
-    width: "60%",
+    width: "70%",
     color: "#fff",
     fontSize: "24px",
     fontWeight: "lighter",
