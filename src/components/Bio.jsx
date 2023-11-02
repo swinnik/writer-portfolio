@@ -1,4 +1,5 @@
 import React from "react";
+import profile from "../assets/images/profile.jpg";
 
 const Bio = () => {
   return (
@@ -13,10 +14,7 @@ const Bio = () => {
           }}
         >
           <div style={styles.h1}> Daniel Pope</div>
-          <img
-            src="https://media.licdn.com/dms/image/D4E03AQFM-oPf4jIItw/profile-displayphoto-shrink_400_400/0/1676838037708?e=1698278400&v=beta&t=GaxJQgHG243q8Xsd4vRvmXh9CsSyvNXbe5qFLpmi-do"
-            style={styles.profileImage}
-          />
+          <img src={profile} style={styles.profileImage} />
         </div>
         <div style={styles.p}>
           {" "}
