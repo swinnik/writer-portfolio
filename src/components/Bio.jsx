@@ -1,5 +1,4 @@
 import React from "react";
-import profile from "../assets/images/profile.jpg";
 
 const Bio = () => {
   return (
@@ -8,13 +7,16 @@ const Bio = () => {
         <div
           style={{
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
             flexWrap: "wrap",
             alignItems: "center",
           }}
         >
           <div style={styles.h1}> Daniel Pope</div>
-          <img src={profile} style={styles.profileImage} />
+          <img
+            src="https://writer-portfolio.s3.us-west-1.amazonaws.com/src/assets/images/profile.jpg"
+            style={styles.profileImage}
+          />
         </div>
         <div style={styles.p}>
           {" "}
