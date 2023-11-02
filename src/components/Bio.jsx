@@ -8,7 +8,7 @@ const Bio = () => {
         <div
           style={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "space-around",
             flexWrap: "wrap",
             alignItems: "center",
           }}
