@@ -14,7 +14,7 @@ const Bio = () => {
         >
           <div style={styles.h1}> Daniel Pope</div>
           <img
-            src="https://writer-portfolio.s3.us-west-1.amazonaws.com/src/assets/images/profile.jpg"
+            src="https://media.licdn.com/dms/image/D4E03AQFM-oPf4jIItw/profile-displayphoto-shrink_800_800/0/1676838037708?e=1704326400&v=beta&t=7Yq4UI6GLeGAi4DOnZntGMaahkVmMW-jqdYfJW1t_5w"
             style={styles.profileImage}
           />
         </div>
